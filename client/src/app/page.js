@@ -5,6 +5,10 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import HomeButton from "@/components/HomeButton";
 
+const [title, setTitle] = useState("");
+const [description, setDescription] = useState("");
+const [owner, setOwner] = useState("");
+
 export default function Home() {
   const polls = [
     {
