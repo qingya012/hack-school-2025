@@ -12,6 +12,11 @@ server.use("/api", router);
 
 // TODO
 // SETUP ACTIVITY: Put the code to connect to MongoDB below!
+const mongoose = require("mongoose");
+
+mongoose.connect(config.DB_URL)
+.then(() => console. log('Connected to MongoDB'))
+.catch((error) => console.error('Error connecting to MongoDB:', err));
 
 // END SETUP ACTIVITY
 server.listen(config.PORT, () => {
